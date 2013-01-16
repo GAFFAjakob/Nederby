@@ -53,13 +53,13 @@ class MinecraftTask extends Shell{
 					if($this->MinecraftLog->save($minecraftLog)){
 						echo "Log saved - ".date("Y-m-d H:i:s")."\n";
 					}else{
-						echo "Error - could not saved\n";
+						//echo "Error - could not saved\n";
 					}
 				}else{
-					echo "No new logs found\n";
+					//echo "No new logs found\n";
 				}
 			}else{
-				echo "ReqEx is ignoring this line\n";
+				//echo "ReqEx is ignoring this line\n";
 			}
 		}
 	}

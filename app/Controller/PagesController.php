@@ -73,4 +73,8 @@ class PagesController extends AppController {
 		$this->render(implode('/', $path));
 	}
 	
+	public function frontpage(){
+	
+	}
+	
 }
