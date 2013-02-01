@@ -1,12 +1,15 @@
 <?php
 App::uses('AppController', 'Controller');
+
 /**
  * MinecraftLogs Controller
  *
  * @property MinecraftLog $MinecraftLog
  */
 class MinecraftLogsController extends AppController {
-
+	
+	public $components = array('RequestHandler');
+	
 	public $paginate = array(
 		'limit' => 25,
 		'order' => array(
@@ -36,6 +39,10 @@ class MinecraftLogsController extends AppController {
 			throw new NotFoundException(__('Invalid minecraft log'));
 		}
 		$this->set('minecraftLog', $this->MinecraftLog->read(null, $id));
+	}
+	
+	public function download(){
+		
 	}
 
 /**
